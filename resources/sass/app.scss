@@ -1,0 +1,66 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    background-color: #111;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.train-board {
+    background-color: #000;
+    color: #ff9f1c;
+    border: 3px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 159, 28, 0.25);
+}
+
+.train-board h1 {
+    color: #ff9f1c;
+    letter-spacing: 3px;
+}
+
+.train-table {
+    --bs-table-bg: #000;
+    --bs-table-color: #ff9f1c;
+    --bs-table-border-color: #222;
+    --bs-table-hover-bg: #1a1a1a;
+    --bs-table-hover-color: #ffb347;
+
+}
+
+.train-table th {
+    color: #ffc266;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.train-table td {
+    color: #ff9f1c;
+}
+
+.status {
+    text-transform: uppercase;
+}
+
+.status-on_time,
+.status-arrived,
+.status-departed {
+    color: #00ff88;
+}
+
+.status-delayed {
+    color: #ffcc00;
+}
+
+.status-cancelled {
+    color: #ff4d4d;
+}
