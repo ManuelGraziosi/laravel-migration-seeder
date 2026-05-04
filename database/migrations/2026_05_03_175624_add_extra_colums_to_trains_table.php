@@ -11,9 +11,9 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->string("arrival_platform")->nullable();
-            $table->string("departure_platform")->nullable();
-            $table->unsignedInteger("delay_minutes");
+            $table->string("departure_platform")->nullable()->after("departure_station");
+            $table->string("arrival_platform")->nullable()->after("arrival_station");
+            $table->unsignedInteger("delay_minutes")->after("carriages_count");
             $table->enum("status", [
                 'scheduled',
                 'on_time',
@@ -21,7 +21,7 @@ return new class extends Migration {
                 'cancelled',
                 'departed',
                 'arrived'
-            ]);
+            ])->after("is_cancelled");
             //
         });
     }
