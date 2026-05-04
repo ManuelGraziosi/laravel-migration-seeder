@@ -14,4 +14,11 @@ class PageController extends Controller
 
         return view("home", compact("trains"));
     }
+
+    public function filtered()
+    {
+
+        $trains = Train::whereDate('departure_time', today())->get();
+        return view("home", compact("trains"));
+    }
 }
